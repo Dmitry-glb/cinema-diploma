@@ -1,0 +1,173 @@
+.conf-step__paragraph {
+    margin-bottom: 20px;
+}
+
+.conf-step__movies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.conf-step__movie {
+    display: flex;
+    align-items: center;
+    width: 250px;
+    height: 60px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #CAE5CD;
+    cursor: grab;
+    position: relative;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+}
+
+.conf-step__movie:hover {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.conf-step__movie:active {
+    cursor: grabbing;
+}
+
+.conf-step__movie-poster {
+    width: 40px;
+    height: 100%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.conf-step__movie-info {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.conf-step__movie-title {
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 3px;
+    color: #000;
+}
+
+.conf-step__movie-duration {
+    font-size: 11px;
+    color: #555;
+}
+
+.delete-film-btn {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    color: #666;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 5px;
+    box-shadow: none !important;
+}
+
+.delete-film-btn:hover {
+    color: #d00;
+    background: transparent;
+}
+
+
+.conf-step__seances {
+    margin-bottom: 30px;
+}
+
+.conf-step__seances-hall {
+    margin-bottom: 25px;
+}
+
+.conf-step__seances-title {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+    color: #000;
+}
+
+.conf-step__seances-timeline-wrapper {
+    width: 100%;
+    height: 60px;
+    background-color: #EAEAEA;
+    border: 1px solid #888;
+    position: relative;
+    background-image: repeating-linear-gradient(to right,
+            transparent,
+            transparent 59px,
+            #ccc 60px);
+}
+
+.conf-step__seances-timeline {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.conf-step__seances-movie {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: grab;
+    overflow: hidden;
+    padding: 5px;
+    box-sizing: border-box;
+    font-size: 10px;
+    line-height: 1.2;
+    color: #000;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    transition: opacity 0.2s;
+}
+
+.conf-step__seances-movie:hover {
+    opacity: 0.9;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.conf-step__seances-movie-title {
+    font-weight: 700;
+    margin: 0 0 2px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.conf-step__seances-movie-start {
+    margin: 0;
+    font-size: 9px;
+    color: #333;
+}
+
+
+.conf-step__trash-zone {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px dashed #d00;
+    color: #d00;
+    text-align: center;
+    background-color: #ffe6e6;
+    font-weight: 700;
+}
+
+
+.conf-step__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}

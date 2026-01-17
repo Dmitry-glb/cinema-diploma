@@ -1,0 +1,221 @@
+.conf-step__list {
+    margin: 0 0 25px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.conf-step__list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.conf-step__list li::before {
+    content: '-';
+    margin-right: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #000;
+}
+
+.conf-step__list-text {
+    margin-right: 15px;
+
+    .conf-step__list {
+        margin: 0 0 25px 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .conf-step__list li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+
+    .conf-step__list li::before {
+        content: '-';
+        margin-right: 10px;
+        font-weight: 700;
+        font-size: 16px;
+        color: #000;
+    }
+
+    .conf-step__list-text {
+        margin-right: 0;
+        font-size: 16px;
+        color: #000;
+        font-weight: 700;
+    }
+
+    .conf-step__button-trash {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        position: relative;
+        width: 18px;
+        height: 20px;
+        margin-left: 10px;
+        font-size: 0;
+        color: transparent;
+        overflow: visible;
+    }
+
+    .conf-step__button-trash::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 2px;
+        width: 14px;
+        height: 15px;
+        border: 2px solid #666;
+        border-top: none;
+        border-radius: 0 0 3px 3px;
+        box-sizing: border-box;
+        transition: all 0.2s;
+        box-shadow: inset 3px 0 0 -1px #666, inset -3px 0 0 -1px #666;
+    }
+
+    .conf-step__button-trash::before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 0;
+        width: 18px;
+        height: 2px;
+        background: #666;
+        border-top: 2px solid #666;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        box-sizing: border-box;
+        height: 4px;
+        transition: all 0.2s;
+        transform-origin: left bottom;
+    }
+
+    .conf-step__button-trash:hover::after {
+        border-color: #d00;
+        box-shadow: inset 3px 0 0 -1px #d00, inset -3px 0 0 -1px #d00;
+    }
+
+    .conf-step__button-trash:hover::before {
+        background: #d00;
+        border-top-color: #d00;
+        transform: translateY(-2px) rotate(-15deg);
+    }
+
+
+    .conf-step__button-accent {
+        background-color: #25C4CE;
+        color: #FFFFFF;
+        border: none;
+        padding: 10px 30px;
+        border-radius: 3px;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 13px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .conf-step__button-accent:hover {
+        background-color: #1EAAB3;
+    }
+
+    font-size: 16px;
+    color: #000;
+    font-weight: 700;
+}
+
+
+.conf-step__button-trash {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+
+    position: relative;
+    width: 18px;
+    height: 20px;
+
+    margin-left: 10px;
+
+    font-size: 0;
+    color: transparent;
+    overflow: visible;
+}
+
+.conf-step__button-trash::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 2px;
+    width: 14px;
+    height: 15px;
+
+    border: 2px solid #666;
+    border-top: none;
+    border-radius: 0 0 3px 3px;
+    box-sizing: border-box;
+    transition: all 0.2s;
+
+    box-shadow:
+        inset 3px 0 0 -1px #666,
+        inset -3px 0 0 -1px #666;
+}
+
+.conf-step__button-trash::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 18px;
+    height: 2px;
+    background: #666;
+
+    border-top: 2px solid #666;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+
+    box-sizing: border-box;
+    height: 4px;
+    transition: all 0.2s;
+    transform-origin: left bottom;
+}
+
+.conf-step__button-trash:hover::after {
+    border-color: #d00;
+    box-shadow: inset 3px 0 0 -1px #d00, inset -3px 0 0 -1px #d00;
+}
+
+.conf-step__button-trash:hover::before {
+    background: #d00;
+    border-top-color: #d00;
+    transform: translateY(-2px) rotate(-15deg);
+}
+
+
+.conf-step__form {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: transparent;
+    padding: 0;
+    margin-top: 25px;
+}
+
+.conf-step__input {
+    padding: 10px 12px;
+    border: 1px solid #C0C0C0;
+    border-radius: 2px;
+    font-size: 14px;
+    outline: none;
+    width: 220px;
+    background: #fff;
+}
+
+.conf-step__input:focus {
+    border-color: #25C4CE;
+}

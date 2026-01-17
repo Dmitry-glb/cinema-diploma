@@ -1,0 +1,138 @@
+.movie {
+    display: flex;
+    padding: 25px;
+    background-color: var(--color-bg-card);
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.movie__poster {
+    width: 160px;
+    margin-right: 30px;
+    flex-shrink: 0;
+}
+
+.movie__poster-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.movie__description {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie__title {
+    margin: 0 0 12px;
+    font-size: 22px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--color-text-main);
+}
+
+.movie__synopsis {
+    font-size: 15px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.movie__data {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    margin-bottom: 20px;
+}
+
+.movie__data-duration,
+.movie__data-origin {
+    margin-right: 20px;
+}
+
+.movie-seances__hall {
+    margin-bottom: 15px;
+}
+
+.movie-seances__hall-title {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0 8px;
+    color: var(--color-text-main);
+}
+
+.movie-seances__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.movie-seances__time-block {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.movie-seances__time {
+    background-color: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    color: #000;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+    border-radius: 2px;
+}
+
+.movie-seances__time:hover:not(:disabled) {
+    background-color: var(--color-btn-primary);
+    color: #fff;
+    border-color: var(--color-btn-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.movie-seances__time_disabled {
+    background-color: #f5f5f5;
+    color: #ccc;
+    cursor: default;
+    box-shadow: none;
+}
+
+@media (max-width: 768px) {
+    .movie {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 15px;
+    }
+
+    .movie__poster {
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 180px;
+    }
+
+    .movie__description {
+        width: 100%;
+        text-align: center;
+    }
+
+    .movie__data {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .movie-seances__list {
+        justify-content: center;
+    }
+
+    .movie-seances__time {
+        padding: 8px 12px;
+    }
+}

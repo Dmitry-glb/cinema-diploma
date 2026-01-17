@@ -1,0 +1,134 @@
+.ticket-page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    min-height: calc(100vh - 100px);
+}
+
+.ticket-card {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.9);
+
+    width: 100%;
+    max-width: 990px;
+
+    padding: 30px 15px 30px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: #000;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.ticket-card__header {
+    margin: 0 0 25px 0;
+    padding-bottom: 0;
+    border: none;
+}
+
+.ticket-card__title {
+    color: #F9953C;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.ticket-card__info-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.ticket-card__info {
+    flex: 1;
+    min-width: 250px;
+    text-align: left;
+}
+
+.ticket-card__row {
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #000;
+    margin: 0;
+    font-weight: 400;
+}
+
+.ticket-card__label {
+    display: inline;
+    color: #000;
+    font-weight: 400;
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.ticket-card__value {
+    font-weight: 900;
+    font-size: 16px;
+    color: #000;
+}
+
+.ticket-card__qr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    align-self: center;
+
+    margin: 35px auto 20px auto;
+
+    padding: 10px;
+    background: #fff;
+}
+
+.ticket-card__qr img,
+.ticket-card__qr svg,
+.ticket-card__qr canvas {
+    width: 200px;
+    height: 200px;
+    display: block;
+}
+
+.ticket-card__hint {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #555;
+    text-align: left;
+    line-height: 1.5;
+    max-width: 600px;
+}
+
+.ticket-card__footer-text {
+    text-align: left;
+    color: #555;
+    margin-top: 5px;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 14px;
+}
+
+@media (max-width: 650px) {
+    .ticket-card__info-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ticket-card__info {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .ticket-card__qr {
+        width: 100%;
+        background: transparent;
+        padding: 0;
+    }
+
+    .ticket-card {
+        padding: 50px 20px;
+    }
+}

@@ -1,0 +1,237 @@
+.hall-page {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 50px;
+    color: #000;
+}
+
+.hall-page__info {
+    padding: 20px 30px;
+    padding-bottom: 10px;
+}
+
+.hall-page__title {
+    margin: 0 0 5px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.hall-page__details {
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+}
+
+.hall-page__hall-name {
+    display: block;
+    font-size: 16px;
+    font-weight: 900;
+    margin-top: 5px;
+    color: #000;
+}
+
+.hall-page__screen-view,
+.hall-config {
+    background-color: #161D23;
+    padding: 30px 20px 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+}
+
+.hall-page__screen-wrapper,
+.hall-config__screen {
+    width: 100%;
+    max-width: 450px;
+    height: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    background-image: url('../../assets/images/hall/screen.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+}
+
+.hall-page__screen-text,
+.hall-config__screen span {
+    display: none;
+}
+
+.hall-page__screen-img {
+    width: 100%;
+    opacity: 0.8;
+}
+
+.hall-page__places,
+.hall-config__places {
+    margin-bottom: 10px;
+}
+
+.hall-page__row,
+.hall-config__row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.hall-page__seat,
+.hall-config__seat {
+    width: 24px;
+    height: 24px;
+    margin: 0 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+
+    border: 2px solid #666666;
+    box-sizing: border-box;
+}
+
+.hall-page__seat:hover:not(.hall-config__seat_taken):not(.hall-page__seat_taken) {
+    transform: scale(1.15);
+    z-index: 2;
+}
+
+.hall-page__seat,
+.hall-config__seat_standart {
+    background-color: #FFFFFF;
+}
+
+.hall-page__seat_vip,
+.hall-config__seat_vip {
+    background-color: #F9953C;
+}
+
+.hall-page__seat_taken,
+.hall-config__seat_taken {
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: default;
+    box-shadow: none;
+}
+
+.hall-page__seat_selected,
+.hall-config__seat_selected {
+    background-color: #25C4CE;
+    box-shadow: 0 0 10px rgba(37, 196, 206, 0.6);
+}
+
+.hall-page__legend,
+.hall-legend {
+    background-color: #161D23;
+    padding: 0 20px 40px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px 40px;
+    justify-content: center;
+    justify-items: start;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.hall-page__screen-view+.hall-page__legend {
+    margin-top: -1px;
+}
+
+.hall-page__legend-item,
+.hall-legend__item,
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #CCCCCC;
+    font-weight: 300;
+    width: 100%;
+}
+
+.hall-page__legend-item div,
+.legend-item div {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: default;
+    box-shadow: none;
+    flex-shrink: 0;
+}
+
+@media (min-width: 600px) {
+
+    .hall-page__legend,
+    .hall-legend {
+        padding-left: 20%;
+    }
+}
+
+.hall-page__footer {
+    padding: 0;
+    background-color: transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hall-page__book-btn {
+    display: block;
+
+    min-width: 250px;
+    padding: 14px 40px;
+
+    margin: 35px auto;
+
+    background-color: #25C4CE;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 3px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    transition: background-color 0.3s, transform 0.1s;
+    border: none;
+}
+
+.hall-page__book-btn:hover {
+    background-color: #1EAAB3;
+}
+
+.hall-page__book-btn:active {
+    transform: translateY(1px);
+}
+
+.hall-page__book-btn:disabled {
+    background-color: #CCCCCC;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+@media (max-width: 500px) {
+
+    .hall-page__legend,
+    .hall-legend {
+        grid-template-columns: 1fr;
+        padding-left: 10%;
+    }
+
+    .hall-page__screen-view,
+    .hall-config {
+        padding-left: 10px;
+        padding-right: 10px;
+        overflow-x: auto;
+    }
+
+    .hall-page__book-btn {
+        margin: 25px auto;
+        width: 80%;
+    }
+}

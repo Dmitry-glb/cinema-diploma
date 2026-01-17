@@ -1,0 +1,15 @@
+.sales-control__content {
+    text-align: center;
+}
+
+.sales-control__status {
+    font-size: 18px;
+    font-weight: 700;
+    color: #848484;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.sales-control__status_active {
+    color: #16A085;
+}

@@ -1,0 +1,18 @@
+.wrapper {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.client-content {
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.admin-layout,
+.client-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

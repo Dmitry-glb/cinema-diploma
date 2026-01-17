@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --container-width: 990px;
+  --color-header-text: #FFFFFF;
+  --color-logo-start: #FFFFFF;
+  --color-logo-end: #F2C94C;
+  --color-bg: #D37407;
+
+  --color-bg-card: rgba(255, 255, 255, 0.8);
+
+  --color-btn-primary: #17A589;
+  --color-btn-hover: #138871;
+  --color-text-main: #000000;
+  --color-text-secondary: #555555;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: var(--color-bg);
+
+  background-image: url('./assets/images/backgrounds/popcorn_background.jpg');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  min-height: 100vh;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body.admin-body-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('./assets/images/backgrounds/admin_background.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
