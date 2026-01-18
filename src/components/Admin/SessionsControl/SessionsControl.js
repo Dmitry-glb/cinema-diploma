@@ -15,7 +15,7 @@ const SessionsControl = ({ halls, films, seances, onUpdate }) => {
     const [draggedSeanceId, setDraggedSeanceId] = useState(null);
 
     const handleDeleteFilm = (id) => {
-        if (confirm('Удалить фильм и все его сеансы?')) {
+        if (window.confirm('Удалить фильм и все его сеансы?')) {
             request(`film/${id}`, 'DELETE').then(data => {
                 if (data.result) onUpdate();
             });
@@ -55,7 +55,7 @@ const SessionsControl = ({ halls, films, seances, onUpdate }) => {
     const handleDropTrash = (e) => {
         e.preventDefault();
         if (draggedSeanceId) {
-            if (confirm("Удалить сеанс?")) {
+            if (window.confirm("Удалить сеанс?")) {
                 request(`seance/${draggedSeanceId}`, 'DELETE').then(data => {
                     if (data.result) onUpdate();
                 });

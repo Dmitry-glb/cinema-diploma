@@ -7,7 +7,7 @@ const HallsControl = ({ halls, onUpdate }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleDelete = (id) => {
-        if (confirm('Вы уверены? Удаление зала приведет к удалению всех сеансов в нем!')) {
+        if (window.confirm('Вы уверены? Удаление зала приведет к удалению всех сеансов в нем!')) {
             request(`hall/${id}`, 'DELETE').then(data => {
                 if (data.result) {
                     onUpdate();

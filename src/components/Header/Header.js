@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, Link } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
@@ -7,7 +7,6 @@ const Header = () => {
     const location = useLocation();
 
     const isAdmin = location.pathname.includes('admin');
-
     const isLoginPage = location.pathname === '/login';
 
     return (
@@ -16,9 +15,9 @@ const Header = () => {
                 <div className="page-header__content">
 
                     <div className="page-header__logo-wrapper">
-                        <a href="/" className="page-header__title">
+                        <Link to="/" className="page-header__title">
                             Идём<span className="page-header__title-thin">в</span>кино
-                        </a>
+                        </Link>
 
                         {isAdmin && (
                             <span className="page-header__subtitle">Администраторррская</span>
