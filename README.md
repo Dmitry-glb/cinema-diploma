@@ -14,10 +14,3 @@
 * **API:** Fetch API, FormData.
 * **Auth:** LocalStorage.
 * **Features:** HTML5 Drag & Drop API.
-
-## 🚀 Запуск локально
-
-```bash
-git clone [https://github.com/Dmitry-glb/cinema-diploma.git](https://github.com/Dmitry-glb/cinema-diploma.git)
-npm install
-npm start
