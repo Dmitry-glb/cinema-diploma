@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/cinema-diploma/static/css/main.55132074.css",
-    "main.js": "/cinema-diploma/static/js/main.ad9486d0.js",
+    "main.js": "/cinema-diploma/static/js/main.78ef8794.js",
     "static/js/453.0f5998db.chunk.js": "/cinema-diploma/static/js/453.0f5998db.chunk.js",
     "static/media/popcorn_background.jpg": "/cinema-diploma/static/media/popcorn_background.0434d22a2ae4da106a9f.jpg",
     "static/media/admin_background.jpg": "/cinema-diploma/static/media/admin_background.195d020c70d2955f5661.jpg",
     "index.html": "/cinema-diploma/index.html",
     "main.55132074.css.map": "/cinema-diploma/static/css/main.55132074.css.map",
-    "main.ad9486d0.js.map": "/cinema-diploma/static/js/main.ad9486d0.js.map",
+    "main.78ef8794.js.map": "/cinema-diploma/static/js/main.78ef8794.js.map",
     "453.0f5998db.chunk.js.map": "/cinema-diploma/static/js/453.0f5998db.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.55132074.css",
-    "static/js/main.ad9486d0.js"
+    "static/js/main.78ef8794.js"
   ]
 }
