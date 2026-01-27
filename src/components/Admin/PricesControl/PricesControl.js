@@ -22,6 +22,11 @@ const PricesControl = ({ halls, onUpdate }) => {
     }, [selectedHallId, halls]);
 
     const handleSave = () => {
+        if (Number(priceStandart) <= 0 || Number(priceVip) <= 0) {
+            alert('Цена должна быть больше 0!');
+            return;
+        }
+
         const body = new FormData();
         body.set('priceStandart', priceStandart);
         body.set('priceVip', priceVip);
@@ -81,6 +86,7 @@ const PricesControl = ({ halls, onUpdate }) => {
                         value={priceStandart}
                         onChange={(e) => setPriceStandart(e.target.value)}
                         placeholder="0"
+                        min="0"
                     />
                 </div>
                 <div className="conf-step__hint">
@@ -97,6 +103,7 @@ const PricesControl = ({ halls, onUpdate }) => {
                         value={priceVip}
                         onChange={(e) => setPriceVip(e.target.value)}
                         placeholder="0"
+                        min="0"
                     />
                 </div>
                 <div className="conf-step__hint">

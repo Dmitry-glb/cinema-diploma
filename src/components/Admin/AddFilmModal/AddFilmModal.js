@@ -11,6 +11,11 @@ const AddFilmModal = ({ onClose, onSuccess }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if (Number(duration) <= 0) {
+            alert('Продолжительность фильма должна быть больше 0 минут!');
+            return;
+        }
+
         const body = new FormData();
         body.set('filmName', name);
         body.set('filmDuration', duration);
@@ -39,23 +44,58 @@ const AddFilmModal = ({ onClose, onSuccess }) => {
                     <form onSubmit={handleSubmit}>
                         <label className="conf-step__label conf-step__label-fullsize">
                             Название фильма
-                            <input className="conf-step__input" type="text" placeholder="Например, «Гражданин Кейн»" value={name} onChange={e => setName(e.target.value)} required />
+                            <input
+                                className="conf-step__input"
+                                type="text"
+                                placeholder="Например, «Гражданин Кейн»"
+                                value={name}
+                                onChange={e => setName(e.target.value)}
+                                required
+                            />
                         </label>
+
                         <label className="conf-step__label conf-step__label-fullsize">
                             Длительность фильма (мин)
-                            <input className="conf-step__input" type="number" value={duration} onChange={e => setDuration(e.target.value)} required />
+                            <input
+                                className="conf-step__input"
+                                type="number"
+                                value={duration}
+                                onChange={e => setDuration(e.target.value)}
+                                required
+                                min="1"
+                            />
                         </label>
+
                         <label className="conf-step__label conf-step__label-fullsize">
                             Описание
-                            <textarea className="conf-step__input" value={description} onChange={e => setDescription(e.target.value)} required />
+                            <textarea
+                                className="conf-step__input"
+                                value={description}
+                                onChange={e => setDescription(e.target.value)}
+                                required
+                            />
                         </label>
+
                         <label className="conf-step__label conf-step__label-fullsize">
                             Страна
-                            <input className="conf-step__input" type="text" value={origin} onChange={e => setOrigin(e.target.value)} required />
+                            <input
+                                className="conf-step__input"
+                                type="text"
+                                value={origin}
+                                onChange={e => setOrigin(e.target.value)}
+                                required
+                            />
                         </label>
+
                         <label className="conf-step__label conf-step__label-fullsize">
                             Постер (PNG, до 3Мб)
-                            <input className="conf-step__input" type="file" accept="image/png" onChange={e => setPoster(e.target.files[0])} required />
+                            <input
+                                className="conf-step__input"
+                                type="file"
+                                accept="image/png"
+                                onChange={e => setPoster(e.target.files[0])}
+                                required
+                            />
                         </label>
 
                         <div className="conf-step__buttons text-center">
